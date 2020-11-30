@@ -26,13 +26,7 @@ public class LockerScript : MonoBehaviour
         //Si el codigo que introduce es correcto cambia la posicion de la puerta para que se abra
         if (pantalla.text.Equals(codi)) 
         {
-            /*puerta1.transform.position = new Vector3((float)-0.506, (float)1.599631, (float)1.199);
-            puerta1.transform.rotation = new Quaternion(0,(float)-83.70901, 0,0);*/
-            /*puerta1.transform.localPosition = new Vector3((float)-0.506, (float)1.599631, (float)1.199);
-            puerta1.transform.localRotation = new Quaternion(0, (float)-83.70901, 0, 0);*/
-
             puerta1.transform.localRotation = Quaternion.Euler(0, (float)83.70901, 0);
-
         }
     }
 
