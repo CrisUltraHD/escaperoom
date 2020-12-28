@@ -21,7 +21,6 @@ public class Ordenador : MonoBehaviour
         panelTxt.SetActive(false);
         panelContra.SetActive(false);
         wallpaper.SetActive(false);
-
     }
 
     // Update is called once per frame
