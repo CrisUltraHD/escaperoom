@@ -10,6 +10,7 @@ TagManager:
   - puertaHabitacion3
   - Ordenador
   - lock2
+  - CAJONHABITACION4
   layers:
   - Default
   - TransparentFX

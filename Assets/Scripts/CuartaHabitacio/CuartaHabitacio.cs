@@ -9,11 +9,14 @@ public class CuartaHabitacio : MonoBehaviour
 
     public Canvas locker;
 
+    public Canvas lockerCajon;
+
+
     private void Start()
     {
         //LOCKER
         locker.enabled = false;
-
+        lockerCajon.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,11 +26,19 @@ public class CuartaHabitacio : MonoBehaviour
         {
             locker.enabled = true;
         }
+
+        //CAJON
+        if (other.gameObject.tag == "CAJONHABITACION4")
+        {
+            lockerCajon.enabled = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         locker.enabled = false;
+        lockerCajon.enabled = false;
+
     }
 
 }

@@ -4,21 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class LockerScript2 : MonoBehaviour
+public class LockerFigures : MonoBehaviour
 {
     //SOLUCION ENIGMA MATEMATICO
-    private string codi = "1879";
+    private string codi = "39456";
 
     //TEXTO QUE MOSTRARA VALOR INTRODUCIDO Y RESULTADO CORRECTO O NO
     public Text pantalla;
 
-    //Gameobject de la puerta
-    public GameObject puerta1;
+    //Gameobject de la llave
+    public GameObject llave;
 
 
     private void Start()
     {
         pantalla.text = "";
+        llave.SetActive(false);
     }
 
     private void Update()
@@ -26,20 +27,10 @@ public class LockerScript2 : MonoBehaviour
         //Si el codigo que introduce es correcto cambia la posicion de la puerta para que se abra
         if (pantalla.text.Equals(codi))
         {
-            puerta1.transform.localRotation = Quaternion.Euler(0, (float)83.70901, 0);
+            llave.SetActive(true);
         }
     }
 
-
-    public void boton1()
-    {
-        pantalla.text = pantalla.text + "1";
-    }
-
-    public void boton2()
-    {
-        pantalla.text = pantalla.text + "2";
-    }
 
     public void boton3()
     {
@@ -76,11 +67,6 @@ public class LockerScript2 : MonoBehaviour
         pantalla.text = pantalla.text + "9";
     }
 
-    public void boton0()
-    {
-        pantalla.text = pantalla.text + "0";
-    }
-
     public void botonBorrar()
     {
         pantalla.text = "";
@@ -88,4 +74,3 @@ public class LockerScript2 : MonoBehaviour
 
 
 }
-
