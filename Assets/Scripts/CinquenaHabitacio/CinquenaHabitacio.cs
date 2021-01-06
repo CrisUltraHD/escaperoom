@@ -10,11 +10,22 @@ public class CinquenaHabitacio : MonoBehaviour
     public Image imagenLlave;
     public GameObject puerta;
 
+    //Caja Fuerte
+    public Canvas locker;
+    public GameObject llaveInsideCaja;
+    public GameObject imagenLlaveCajaFuerte;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         canvas.SetActive(false);
         textoPuerta.text = "";
+        //LOCKER
+        locker.enabled = false;
+        imagenLlaveCajaFuerte.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -40,6 +51,20 @@ public class CinquenaHabitacio : MonoBehaviour
             canvas.SetActive(true);
             textoPuerta.text = "Has de trobar una clau \n per poder obrir la porta i continuar l'aventura";
         }
+
+        //LOCKER
+        if (other.gameObject.tag == "lock3")
+        {
+            locker.enabled = true;
+        }
+
+        //Si choca con el collider de la llave desaparece y aparece en el inventario
+        if (other.gameObject.tag == "ColliderLlave")
+        {
+            Destroy(llaveInsideCaja);
+            imagenLlaveCajaFuerte.SetActive(true);
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -48,6 +73,8 @@ public class CinquenaHabitacio : MonoBehaviour
         {
             canvas.SetActive(false);
         }
+
+        locker.enabled = false;
     }
 
 

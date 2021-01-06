@@ -38,7 +38,6 @@ public class CuartaHabitacio : MonoBehaviour
     {
         locker.enabled = false;
         lockerCajon.enabled = false;
-
     }
 
 }

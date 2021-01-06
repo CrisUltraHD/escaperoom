@@ -12,6 +12,8 @@ TagManager:
   - lock2
   - CAJONHABITACION4
   - PUERTAHABITACION5
+  - lock3
+  - ColliderLlave
   layers:
   - Default
   - TransparentFX
