@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1814296004}
-  m_IndirectSpecularColor: {r: 0.3627908, g: 0.566117, b: 0.843717, a: 1}
+  m_IndirectSpecularColor: {r: 0.36293885, g: 0.5661829, b: 0.8437106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17836,11 +17836,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6b9d8a58c7af112458a82a4c25094796, type: 3}
-    m_FontSize: 28
+    m_FontSize: 65
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 65
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -33983,11 +33983,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 65
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -63507,6 +63507,7 @@ GameObject:
   - component: {fileID: 6635555644623842520}
   - component: {fileID: 481873296158584289}
   - component: {fileID: 6903105788104518675}
+  - component: {fileID: 4074353268524929945}
   m_Layer: 0
   m_Name: DOOR_Boole_1_Cube_1
   m_TagString: Untagged
@@ -63514,6 +63515,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4074353268524929945
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074353268524929944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5118988359578878123, guid: 40c967ec9b93e1841bc67e99c3b16b76, type: 3}
 --- !u!33 &4129723375453587344
 MeshFilter:
   m_ObjectHideFlags: 0
