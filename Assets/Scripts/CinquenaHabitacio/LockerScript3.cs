@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LockerScript3 : MonoBehaviour
 {
     //SOLUCION ENIGMA MATEMATICO
-    private string codi = "596";
+    private string codi = "4698";
 
     //TEXTO QUE MOSTRARA VALOR INTRODUCIDO Y RESULTADO CORRECTO O NO
     public Text pantalla;

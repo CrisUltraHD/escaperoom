@@ -15,6 +15,11 @@ public class CinquenaHabitacio : MonoBehaviour
     public GameObject llaveInsideCaja;
     public GameObject imagenLlaveCajaFuerte;
 
+    //Enigma
+    public GameObject enigmaGameObject;
+    public Text enigmaText;
+    public Text enunciatEnigma;
+
 
 
     // Start is called before the first frame update
@@ -25,6 +30,8 @@ public class CinquenaHabitacio : MonoBehaviour
         //LOCKER
         locker.enabled = false;
         imagenLlaveCajaFuerte.SetActive(false);
+        //Enigma GameObject
+        enigmaGameObject.SetActive(false);
 
     }
 
@@ -35,6 +42,12 @@ public class CinquenaHabitacio : MonoBehaviour
         {
             puerta.transform.localRotation = Quaternion.Euler(0, -(float)83.70901, 0);
             canvas.SetActive(false);
+        }
+
+        //SI ENCERTA L'ENIGMA ET DONA EL CODI PER OBRIR LA CAIXA FORTA
+        if (enigmaText.text.Equals("10"))
+        {
+            enunciatEnigma.text = "Codi Caixa Forta: 4698";
         }
     }
 
@@ -65,6 +78,12 @@ public class CinquenaHabitacio : MonoBehaviour
             imagenLlaveCajaFuerte.SetActive(true);
         }
 
+        //Si choca con el collider de la llave desaparece y aparece en el inventario
+        if (other.gameObject.tag == "ColliderCajaFuerteEnigma")
+        {
+            enigmaGameObject.SetActive(true);
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -73,9 +92,8 @@ public class CinquenaHabitacio : MonoBehaviour
         {
             canvas.SetActive(false);
         }
-
         locker.enabled = false;
+        enigmaGameObject.SetActive(false);
+
     }
-
-
 }
